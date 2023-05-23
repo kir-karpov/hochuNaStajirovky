@@ -12,7 +12,7 @@ window.onscroll = function () {
 
   const scrollToTopButton = document.querySelector(".scroll-to-top-button");
 
-  // Отображаем кнопку для возврата наверх страницы после прокрутки
+
   if (window.pageYOffset > 0) {
     scrollToTopButton.style.display = "block";
   } else {
@@ -20,7 +20,7 @@ window.onscroll = function () {
   }
 };
 
-// Функция для плавной прокрутки страницы наверх
+
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -84,10 +84,10 @@ function scrollToTop() {
    }
 
    function submitForm(event) {
-     event.preventDefault(); // Предотвратить отправку формы
-     // Обработка отправки формы - здесь вы можете добавить свой код обработки данных формы
+     event.preventDefault();
+
      alert("Форма отправлена!");
-     closeBuyForm(); // Закрыть модальное окно после отправки
+     closeBuyForm(); 
    }
 
 
@@ -95,18 +95,16 @@ window.onload = function () {
   var categories = document.querySelectorAll("footer ul li a");
   for (var i = 0; i < categories.length; i++) {
     categories[i].addEventListener("click", function (event) {
-      event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
+      event.preventDefault(); 
       var pageUrl = this.getAttribute("href");
-      window.location.href = pageUrl; // Переходим на страницу с контентом категории
+      window.location.href = pageUrl; 
     });
   }
 };
 
-// Получаем кнопку переключения темы и добавляем обработчик события по клику
 const themeToggleButton = document.getElementById('theme-toggle-button');
 themeToggleButton.addEventListener('click', toggleTheme);
 
-// Функция переключения темы
 function toggleTheme() {
   const body = document.body;
   body.classList.toggle('dark-theme');
